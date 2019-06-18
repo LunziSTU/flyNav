@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layUI 响应式导航 - 示例</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../layui_exts/flyNav/flyNav.css" media="all">
+</head>
+<body style="background: #f8f8f8;">
+
+<div style="background: #ffffff">
+    <div class="layui-container">
+        <div class="fly-nav">
+            <div class="fly-nav-brand">
+                <a href="index.html">FlyNav</a>
+            </div>
+            <ul class="fly-nav-bar">
+                <li class="fly-nav-item"><a href="">一级菜单 Ⅰ</a></li>
+                <li class="fly-nav-item"><a href="">一级菜单 Ⅱ</a></li>
+                <li class="fly-nav-item"><a href="">一级菜单 Ⅲ</a></li>
+                <li class="fly-nav-item fly-has-child">
+                    <a href="javascript:;">一级菜单 Ⅳ</a>
+                    <dl class="fly-nav-child">
+                        <dd><a href="">二级菜单 Ⅰ</a></dd>
+                        <dd class="fly-has-child">
+                            <a href="javascript:;">二级菜单 Ⅱ</a>
+                            <dl class="fly-nav-child">
+                                <dd>
+                                    <a target="_blank" href="http://dlj.biz">三级菜单 Ⅰ</a>
+                                </dd>
+                                <dd>
+                                    <a href="javascript:;">三级菜单 Ⅱ</a>
+                                </dd>
+                                <dd>
+                                    <a href="javascript:;">三级菜单 Ⅲ</a>
+                                </dd>
+                            </dl>
+                        </dd>
+                        <dd><a href="">二级菜单 Ⅲ</a></dd>
+                        <dd class="fly-child-divider"></dd>
+                        <dd class="fly-has-child">
+                            <a href="javascript:;">二级菜单 Ⅳ</a>
+                            <dl class="fly-nav-child">
+                                <dd>
+                                    <a href="javascript:;">三级菜单 Ⅰ</a>
+                                </dd>
+                                <dd>
+                                    <a href="javascript:;">三级菜单 Ⅱ</a>
+                                </dd>
+                                <dd>
+                                    <a href="javascript:;">三级菜单 Ⅲ</a>
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="fly-nav-item"><a href="">一级菜单 Ⅴ</a></li>
+                <li class="fly-nav-item"><a href="">一级菜单 Ⅵ</a></li>
+            </ul>
+            <button type="button" class="fly-nav-hamburger">
+                <span class="fly-nav-hamburger__box">
+                    <span class="fly-nav-hamburger__inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="../../../layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../../layui_exts/' //配置 layui 第三方扩展组件存放的基础目录
+    }).extend({
+        flyNav: 'flyNav/flyNav'
+    }).use(['element', 'flyNav'], function(){
+
+    });
+</script>
+</body>
+</html>
